@@ -4,96 +4,98 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>A’style couture</title>
-    <!-- Script de secours pour forcer l'affichage du design sur mobile -->
-    <script src="https://unpkg.com"></script>
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; color: #171616; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FBF9F6; color: #171616; margin: 0; padding: 0; }
         .font-display { font-family: 'Playfair Display', serif; }
-        .atelier-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
+        .atelier-container { width: 100%; max-width: 1100px; margin: 0 auto; padding: 0 1.5rem; box-sizing: border-box; }
+        
+        header { background-color: #ffffff; border-b: 1px solid #EBE7E0; padding: 1.5rem 0; sticky: top; z-index: 40; }
+        .header-wrap { display: flex; items-center: center; justify-content: space-between; }
+        .logo-box { display: flex; align-items: center; gap: 12px; text-decoration: none; color: #171616; }
+        .logo-icon { background-color: #171616; color: #C5A880; font-family: 'Playfair Display', serif; font-weight: bold; width: 44px; height: 44px; display: grid; place-items: center; font-size: 20px; border-radius: 3px; }
+        .logo-text { font-family: 'Playfair Display', serif; font-size: 24px; font-weight: 600; line-height: 1; }
+        .logo-sub { font-size: 9px; uppercase: uppercase; letter-spacing: 3px; color: #C5A880; font-weight: 600; display: block; margin-top: 4px; }
+        
+        .hero { padding: 60px 0; }
+        .eyebrow { font-size: 11px; font-weight: 600; tracking: 3px; text-transform: uppercase; color: #C5A880; margin: 0; }
+        h1 { font-family: 'Playfair Display', serif; font-size: 48px; font-weight: 500; line-height: 1.1; margin: 20px 0; }
+        h1 em { color: #8A6D6D; font-style: italic; font-weight: 400; }
+        .desc { font-size: 16px; line-height: 1.6; color: #66615C; max-width: 450px; margin-bottom: 30px; }
+        
+        .btn-btn { background-color: #171616; color: #ffffff; text-decoration: none; padding: 15px 30px; font-size: 12px; font-weight: 600; uppercase: uppercase; letter-spacing: 1px; display: inline-block; border-radius: 3px; }
+        .btn-link { color: #171616; text-decoration: underline; font-size: 13px; font-weight: 500; margin-left: 20px; }
+        
+        .section-bloc { background-color: #ffffff; border-top: 1px solid #EBE7E0; border-bottom: 1px solid #EBE7E0; padding: 60px 0; margin-top: 40px; }
+        .grid-two { display: grid; gap: 40px; }
+        @media (min-width: 768px) { .grid-two { grid-template-columns: 1fr 1fr; } }
+        
+        h2 { font-family: 'Playfair Display', serif; font-size: 32px; font-weight: 500; margin-top: 10px; }
+        h3 { font-family: 'Playfair Display', serif; font-size: 20px; color: #171616; margin-bottom: 10px; }
+        .step { border-top: 1px solid #EBE7E0; padding-top: 20px; margin-bottom: 20px; }
+        
+        footer { background-color: #171616; color: #ffffff; padding: 60px 0; margin-top: 60px; }
+        footer a { color: #C5A880; text-decoration: none; }
+        .btn-wa { background-color: #C5A880; color: #171616; text-align: center; padding: 15px; display: block; text-decoration: none; font-size: 12px; font-weight: 600; uppercase: uppercase; border-radius: 3px; margin-top: 20px; }
     </style>
 </head>
 <body>
 
-    <header style="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur-md">
-        <div class="atelier-container flex h-[84px] items-center justify-between gap-6">
-            <a href="#accueil" class="flex shrink-0 items-center gap-3">
-                <span class="grid h-11 w-11 place-items-center bg-[#171616] text-[#C5A880] font-display text-xl font-bold rounded-[3px]">A</span>
-                <span class="leading-none">
-                    <span class="block font-display text-[1.75rem] font-semibold tracking-[-0.04em]">A’style</span>
-                    <span class="mt-1.5 block text-[0.56rem] font-semibold uppercase tracking-[0.3em] text-[#C5A880]">couture</span>
-                </span>
-            </a>
-            <nav class="hidden lg:flex items-center gap-9 text-[13px] font-medium">
-                <a class="hover:text-[#C5A880]" href="#atelier">L’atelier</a>
-                <a class="hover:text-[#C5A880]" href="#savoir-faire">Savoir-faire</a>
-                <a class="hover:text-[#C5A880]" href="#contact">Contact</a>
-            </nav>
-            <a href="https://wa.me" target="_blank" class="hidden lg:inline-flex items-center gap-2 border border-[#171616] bg-[#171616] text-white px-5 py-2.5 text-xs font-semibold tracking-wider uppercase rounded-[3px]">
-                Parlons de votre projet ↗
+    <header>
+        <div class="atelier-container header-wrap">
+            <a href="#accueil" class="logo-box">
+                <div class="logo-icon">A</div>
+                <div>
+                    <span class="logo-text">A’style</span>
+                    <span class="logo-sub">couture</span>
+                </div>
             </a>
         </div>
     </header>
 
     <main>
-        <section id="accueil" class="atelier-container py-10 sm:py-14 lg:py-20">
-            <div class="grid items-center gap-10 lg:grid-cols-[1fr_1.06fr] lg:gap-16 xl:gap-20">
-                <div class="py-4 lg:py-8">
-                    <p class="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#C5A880]">Couture sur mesure · Mermoz</p>
-                    <h1 class="mt-7 font-display text-[3.5rem] sm:text-[4.5rem] lg:text-[5.5rem] font-medium leading-[0.98] tracking-[-0.045em]">
-                        Portez ce qui<br /><em class="font-normal text-[#8A6D6D] italic">vous</em> ressemble.
-                    </h1>
-                    <p class="mt-7 max-w-[400px] text-[15px] leading-7 text-gray-500 sm:text-base sm:leading-8">
-                        Des pièces créées avec attention, pensées pour votre allure et ajustées à votre histoire.
-                    </p>
-                    <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-5">
-                        <a href="https://wa.me" target="_blank" class="bg-[#171616] text-white px-7 py-4 text-xs font-semibold tracking-wider uppercase rounded-[3px] inline-flex items-center gap-2">
-                            Commencer votre pièce ↗
-                        </a>
-                        <a href="#atelier" class="text-[#171616] font-medium text-[13px] underline underline-offset-4">Découvrir l’atelier ↓</a>
-                    </div>
-                </div>
-                <figure>
-                    <div class="overflow-hidden rounded-[3px] bg-[#FBF9F6] border border-gray-200">
-                        <img src="https://unsplash.com" alt="Atelier" class="h-[410px] w-full object-cover sm:h-[550px] lg:h-[600px]" />
-                    </div>
-                </figure>
+        <section id="accueil" class="atelier-container hero">
+            <p class="eyebrow">Couture sur mesure · Mermoz</p>
+            <h1>Portez ce qui <em>vous</em> ressemble.</h1>
+            <p class="desc">Des pièces créées avec attention, pensées pour votre allure et ajustées à votre histoire.</p>
+            <div>
+                <a href="https://wa.me" target="_blank" class="btn-btn">Commencer votre pièce ↗</a>
+                <a href="#atelier" class="btn-link">Découvrir l’atelier ↓</a>
             </div>
         </section>
 
-        <section id="atelier" class="py-16 bg-[#FBF9F6] border-y border-gray-200">
-            <div class="atelier-container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
+        <section id="atelier" class="section-bloc">
+            <div class="atelier-container grid-two">
                 <div>
-                    <p class="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#C5A880]">Notre approche</p>
-                    <h2 class="font-display text-3xl mt-6">La couture commence par une <em class="italic font-normal">écoute.</em></h2>
-                    <p class="mt-4 text-xs text-gray-400">A’style couture · Vers l’école Mermoz</p>
+                    <p class="eyebrow">Notre approche</p>
+                    <h2>La couture commence par une <em>écoute.</em></h2>
+                    <p style="font-size: 12px; color: #66615C;">A’style couture · Vers l’école Mermoz</p>
                 </div>
-                <div class="grid sm:grid-cols-2 gap-8 text-[15px] text-gray-500">
-                    <div class="border-t border-gray-200 pt-6">
-                        <h3 class="font-display text-xl text-[#171616] mb-3">01. L’échange</h3>
-                        <p>Nous échangeons sur votre envie, votre occasion et votre style.</p>
+                <div>
+                    <div class="step">
+                        <h3>01. L’échange</h3>
+                        <p style="color: #66615C; font-size: 14px;">Nous échangeons sur votre envie, votre occasion et votre style.</p>
                     </div>
-                    <div class="border-t border-gray-200 pt-6">
-                        <h3 class="font-display text-xl text-[#171616] mb-3">02. Le choix des détails</h3>
-                        <p>Nous choisissons ensemble la coupe, les détails et les matières.</p>
+                    <div class="step">
+                        <h3>02. Le choix des détails</h3>
+                        <p style="color: #66615C; font-size: 14px;">Nous choisissons ensemble la coupe, les détails et les matières.</p>
                     </div>
                 </div>
             </div>
         </section>
     </main>
 
-    <footer id="contact" class="bg-[#171616] text-white py-16 mt-20">
-        <div class="atelier-container grid gap-12 sm:grid-cols-2">
+    <footer>
+        <div class="atelier-container grid-two">
             <div>
-                <h3 class="font-display text-2xl font-semibold text-[#C5A880] mb-4">A’style couture</h3>
-                <p class="text-sm text-gray-400">📍 Mermoz, vers l’école Mermoz, Abidjan</p>
-                <a href="tel:+2250101419501" class="block text-sm text-[#C5A880] mt-4">📞 +225 01 01 41 95 01</a>
+                <h3 style="color: #C5A880; font-size: 24px; margin-bottom: 15px;">A’style couture</h3>
+                <p style="font-size: 14px; color: #b3b3b3;">📍 Mermoz, vers l’école Mermoz, Abidjan</p>
+                <a href="tel:+2250101419501" style="display: block; margin-top: 15px; font-weight: 500;">📞 +225 01 01 41 95 01</a>
             </div>
             <div>
-                <a href="https://wa.me" target="_blank" class="w-full text-center bg-[#C5A880] text-[#171616] px-6 py-4 text-xs font-semibold tracking-wider uppercase inline-block rounded-[3px]">
-                    Discuter sur WhatsApp ↗
-                </a>
+                <p style="font-size: 14px; color: #b3b3b3; margin: 0;">Discutons de votre projet sur WhatsApp pour planifier vos prises de mesures à l'atelier.</p>
+                <a href="https://wa.me" target="_blank" class="btn-wa">Discuter sur WhatsApp ↗</a>
             </div>
         </div>
     </footer>
