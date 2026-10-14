@@ -3,148 +3,100 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>A’style couture — Atelier de Couture sur Mesure</title>
-    <!-- Chargement de Tailwind CSS pour le design -->
-    <script src="https://tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            theme: {
-                extend: {
-                    colors: {
-                        gold: '#C5A880',
-                        ink: '#171616',
-                        'rose-ink': '#8A6D6D',
-                        blush: '#FBF9F6',
-                        background: '#FFFFFF',
-                        foreground: '#171616',
-                        border: '#EBE7E0',
-                        'muted-foreground': '#66615C'
-                    },
-                    fontFamily: {
-                        display: ['Playfair Display', 'Georgia', 'serif'],
-                        sans: ['Plus Jakarta Sans', 'Inter', 'sans-serif'],
-                    }
-                }
-            }
-        }
-    </script>
-    <!-- Importation de belles polices pour le style Atelier Héritage -->
+    <title>A’style couture</title>
+    <!-- Script de secours pour forcer l'affichage du design sur mobile -->
+    <script src="https://unpkg.com"></script>
     <link href="https://googleapis.com" rel="stylesheet">
     <style>
         html { scroll-behavior: smooth; }
-        body { font-family: 'Plus Jakarta Sans', sans-serif; }
+        body { font-family: 'Plus Jakarta Sans', sans-serif; background-color: #FFFFFF; color: #171616; }
         .font-display { font-family: 'Playfair Display', serif; }
-        .atelier-container { width: 100%; max-width: 1200px; margin-left: auto; margin-right: auto; padding-left: 1.5rem; padding-right: 1.5rem; }
+        .atelier-container { width: 100%; max-width: 1200px; margin: 0 auto; padding: 0 1.5rem; }
     </style>
 </head>
-<body class="bg-background text-foreground min-h-screen">
+<body>
 
-    <!-- HEADER & NAVIGATION -->
-    <header class="sticky top-0 z-40 border-b border-border bg-white/95 backdrop-blur-md">
+    <header style="sticky top-0 z-40 border-b border-gray-200 bg-white/95 backdrop-blur-md">
         <div class="atelier-container flex h-[84px] items-center justify-between gap-6">
             <a href="#accueil" class="flex shrink-0 items-center gap-3">
-                <span class="grid h-11 w-11 place-items-center bg-ink text-gold font-display text-xl font-bold rounded-[3px]">A</span>
+                <span class="grid h-11 w-11 place-items-center bg-[#171616] text-[#C5A880] font-display text-xl font-bold rounded-[3px]">A</span>
                 <span class="leading-none">
                     <span class="block font-display text-[1.75rem] font-semibold tracking-[-0.04em]">A’style</span>
-                    <span class="mt-1.5 block text-[0.56rem] font-semibold uppercase tracking-[0.3em] text-gold">couture</span>
+                    <span class="mt-1.5 block text-[0.56rem] font-semibold uppercase tracking-[0.3em] text-[#C5A880]">couture</span>
                 </span>
             </a>
-
-            <nav class="hidden items-center gap-9 text-[13px] font-medium lg:flex">
-                <a class="hover:text-gold transition-colors" href="#atelier">L’atelier</a>
-                <a class="hover:text-gold transition-colors" href="#savoir-faire">Savoir-faire</a>
-                <a class="hover:text-gold transition-colors" href="#contact">Contact</a>
+            <nav class="hidden lg:flex items-center gap-9 text-[13px] font-medium">
+                <a class="hover:text-[#C5A880]" href="#atelier">L’atelier</a>
+                <a class="hover:text-[#C5A880]" href="#savoir-faire">Savoir-faire</a>
+                <a class="hover:text-[#C5A880]" href="#contact">Contact</a>
             </nav>
-
-            <a href="https://wa.me/2250101419501" target="_blank" class="hidden lg:inline-flex items-center gap-2 border border-ink bg-ink text-white px-5 py-2.5 text-xs font-semibold tracking-wider uppercase hover:bg-gold hover:border-gold transition-colors rounded-[3px]">
+            <a href="https://wa.me" target="_blank" class="hidden lg:inline-flex items-center gap-2 border border-[#171616] bg-[#171616] text-white px-5 py-2.5 text-xs font-semibold tracking-wider uppercase rounded-[3px]">
                 Parlons de votre projet ↗
             </a>
         </div>
     </header>
 
     <main>
-        <!-- SECTION ACCUEIL (HERO) -->
         <section id="accueil" class="atelier-container py-10 sm:py-14 lg:py-20">
             <div class="grid items-center gap-10 lg:grid-cols-[1fr_1.06fr] lg:gap-16 xl:gap-20">
                 <div class="py-4 lg:py-8">
-                    <p class="text-[11px] font-semibold tracking-[0.25em] uppercase text-gold">Couture sur mesure · Mermoz</p>
+                    <p class="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#C5A880]">Couture sur mesure · Mermoz</p>
                     <h1 class="mt-7 font-display text-[3.5rem] sm:text-[4.5rem] lg:text-[5.5rem] font-medium leading-[0.98] tracking-[-0.045em]">
-                        Portez ce qui<br /><em class="font-normal text-rose-ink italic">vous</em> ressemble.
+                        Portez ce qui<br /><em class="font-normal text-[#8A6D6D] italic">vous</em> ressemble.
                     </h1>
-                    <p class="mt-7 max-w-[400px] text-[15px] leading-7 text-muted-foreground sm:text-base sm:leading-8">
+                    <p class="mt-7 max-w-[400px] text-[15px] leading-7 text-gray-500 sm:text-base sm:leading-8">
                         Des pièces créées avec attention, pensées pour votre allure et ajustées à votre histoire.
                     </p>
                     <div class="mt-9 flex flex-wrap items-center gap-x-7 gap-y-5">
-                        <a href="https://wa.me/2250101419501" target="_blank" class="bg-ink text-white px-7 py-4 text-xs font-semibold tracking-wider uppercase hover:bg-gold transition-colors rounded-[3px] inline-flex items-center gap-2">
+                        <a href="https://wa.me" target="_blank" class="bg-[#171616] text-white px-7 py-4 text-xs font-semibold tracking-wider uppercase rounded-[3px] inline-flex items-center gap-2">
                             Commencer votre pièce ↗
                         </a>
-                        <a href="#atelier" class="text-ink hover:text-gold font-medium text-[13px] underline underline-offset-4 transition-colors">Découvrir l’atelier ↓</a>
-                    </div>
-                    <div class="mt-12 flex items-center gap-3 text-[11px] tracking-[0.03em] text-muted-foreground lg:mt-16">
-                        <span class="h-px w-7 bg-gold/55"></span> Sur mesure. Retouches. Cérémonies.
+                        <a href="#atelier" class="text-[#171616] font-medium text-[13px] underline underline-offset-4">Découvrir l’atelier ↓</a>
                     </div>
                 </div>
-                
                 <figure>
-                    <div class="overflow-hidden rounded-[3px] bg-blush border border-border">
-                        <!-- Image de remplacement élégante si l'image par défaut ne charge pas à la racine -->
-                        <img src="https://unsplash.com" alt="Atelier Couture" class="h-[410px] w-full object-cover sm:h-[550px] lg:h-[600px]" />
+                    <div class="overflow-hidden rounded-[3px] bg-[#FBF9F6] border border-gray-200">
+                        <img src="https://unsplash.com" alt="Atelier" class="h-[410px] w-full object-cover sm:h-[550px] lg:h-[600px]" />
                     </div>
-                    <figcaption class="mt-4 flex items-center justify-between gap-4 text-[10px] tracking-[0.12em] text-muted-foreground">
-                        <span class="uppercase">Le geste de l’atelier</span>
-                        <span class="font-display text-base italic tracking-normal text-ink">Chaque détail compte.</span>
-                    </figcaption>
                 </figure>
             </div>
         </section>
 
-        <!-- SECTION NOTRE APPROCHE -->
-        <section id="atelier" class="py-16 sm:py-24 border-y border-border bg-blush">
+        <section id="atelier" class="py-16 bg-[#FBF9F6] border-y border-gray-200">
             <div class="atelier-container grid gap-10 lg:grid-cols-[0.8fr_1.2fr] lg:gap-24">
                 <div>
-                    <p class="text-[11px] font-semibold tracking-[0.25em] uppercase text-gold">Notre approche</p>
-                    <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl mt-6 leading-tight">La couture commence par une <em class="italic font-normal">écoute.</em></h2>
-                    <p class="mt-4 text-xs tracking-wider uppercase text-muted-foreground">A’style couture · Vers l’école Mermoz</p>
+                    <p class="text-[11px] font-semibold tracking-[0.25em] uppercase text-[#C5A880]">Notre approche</p>
+                    <h2 class="font-display text-3xl mt-6">La couture commence par une <em class="italic font-normal">écoute.</em></h2>
+                    <p class="mt-4 text-xs text-gray-400">A’style couture · Vers l’école Mermoz</p>
                 </div>
-                <div class="grid sm:grid-cols-2 gap-8 text-[15px] leading-7 text-muted-foreground">
-                    <div class="border-t border-border/60 pt-6">
-                        <h3 class="font-display text-xl text-ink font-medium mb-3">01. L’échange</h3>
-                        <p>Nous échangeons sur votre envie, votre occasion et votre style afin de cerner précisément vos besoins.</p>
+                <div class="grid sm:grid-cols-2 gap-8 text-[15px] text-gray-500">
+                    <div class="border-t border-gray-200 pt-6">
+                        <h3 class="font-display text-xl text-[#171616] mb-3">01. L’échange</h3>
+                        <p>Nous échangeons sur votre envie, votre occasion et votre style.</p>
                     </div>
-                    <div class="border-t border-border/60 pt-6">
-                        <h3 class="font-display text-xl text-ink font-medium mb-3">02. Le choix des détails</h3>
-                        <p>Nous choisissons ensemble la coupe parfaite, les détails subtils et les matières les plus nobles.</p>
+                    <div class="border-t border-gray-200 pt-6">
+                        <h3 class="font-display text-xl text-[#171616] mb-3">02. Le choix des détails</h3>
+                        <p>Nous choisissons ensemble la coupe, les détails et les matières.</p>
                     </div>
-                    <div class="border-t border-border/60 pt-6 sm:col-span-2">
-                        <h3 class="font-display text-xl text-ink font-medium mb-3">03. La création</h3>
-                        <p>Votre pièce prend forme patiemment au sein de l’atelier, mariant précision technique et finitions soignées faites main.</p>
-                    </div>
-                </div>
-            </div>
-        </section>
-        
-        <!-- SECTION SAVOIR-FAIRE -->
-        <section id="savoir-faire" class="atelier-container py-16 sm:py-24">
-            <p class="text-[11px] font-semibold tracking-[0.25em] uppercase text-gold text-center">Nos prestations</p>
-            <h2 class="font-display text-3xl sm:text-4xl lg:text-5xl text-center mt-4 mb-16">Un accompagnement rigoureux</h2>
-            <div class="grid md:grid-cols-3 gap-8">
-                <div class="p-8 border border-border bg-white rounded-[3px] hover:border-gold transition-colors">
-                    <span class="block text-xs font-mono text-gold mb-6">01 /</span>
-                    <h3 class="font-display text-2xl font-medium mb-4">Sur mesure</h3>
-                    <p class="text-sm text-muted-foreground leading-relaxed">Une pièce unique imaginée en symbiose avec vous, de la prise de mesures initiale aux dernières retouches de livraison.</p>
-                </div>
-                <div class="p-8 border border-border bg-white rounded-[3px] hover:border-gold transition-colors">
-                    <span class="block text-xs font-mono text-gold mb-6">02 /</span>
-                    <h3 class="font-display text-2xl font-medium mb-4">Tenues d’exception</h3>
-                    <p class="text-sm text-muted-foreground leading-relaxed">Pour les cérémonies, mariages, cocktails et grands jours qui méritent d'arborer une silhouette mémorable et singulière.</p>
-                </div>
-                <div class="p-8 border border-border bg-white rounded-[3px] hover:border-gold transition-colors">
-                    <span class="block text-xs font-mono text-gold mb-6">03 /</span>
-                    <h3 class="font-display text-2xl font-medium mb-4">Retouches soignées</h3>
-                    <p class="text-sm text-muted-foreground leading-relaxed">Nous réajustons minutieusement vos précieuses pièces pour vous permettre de retrouver l’aisance parfaite, la ligne et la confiance.</p>
                 </div>
             </div>
         </section>
     </main>
 
-    <!-- FOOTER & CONTACT -->
+    <footer id="contact" class="bg-[#171616] text-white py-16 mt-20">
+        <div class="atelier-container grid gap-12 sm:grid-cols-2">
+            <div>
+                <h3 class="font-display text-2xl font-semibold text-[#C5A880] mb-4">A’style couture</h3>
+                <p class="text-sm text-gray-400">📍 Mermoz, vers l’école Mermoz, Abidjan</p>
+                <a href="tel:+2250101419501" class="block text-sm text-[#C5A880] mt-4">📞 +225 01 01 41 95 01</a>
+            </div>
+            <div>
+                <a href="https://wa.me" target="_blank" class="w-full text-center bg-[#C5A880] text-[#171616] px-6 py-4 text-xs font-semibold tracking-wider uppercase inline-block rounded-[3px]">
+                    Discuter sur WhatsApp ↗
+                </a>
+            </div>
+        </div>
+    </footer>
+
+</body>
+</html>
